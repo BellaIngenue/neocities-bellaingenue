@@ -1,11 +1,10 @@
 /* COMMENTS LOOK LIKE ME :) */
 
-@import url('https://fonts.googleapis.com/css2?family=Chewy&family=DynaPuff:wght@400..700&family=Geo:ital@0;1&family=Offside&family=Unica+One&display=swap');
-/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Coiny&family=Concert+One&family=DynaPuff:wght@400..700&family=Geo:ital@0;1&family=Offside&family=Unica+One&display=swap');/* FONT IMPORT */
 
 body {
     font-size: 20px;
-    font-family: Unica One;
+    font-family: Unica One, monospace;
     font-weight: bold;
     padding: 0;
     margin: 0;
@@ -20,8 +19,48 @@ body {
 
 }
 
+.fish {
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    padding-top: 10px;
+    animation: pulse-animation 2s infinite ease-in-out;
+}
+
+.fish2 {
+    position:absolute;
+    right: -10px;
+    top: 580px;
+    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    padding-top: 10px;
+    animation: pulse-animation 2s infinite ease-in-out;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Scales up by 10% */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 center {
     text-align: center;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 /*Contains everything*/
@@ -33,7 +72,7 @@ center {
     margin-top: -10px;
     border-left: 0px solid #12282f;
     border-right: 0px solid #12282f;
-    border-radius: 50px;
+    border-radius: 20px;
     margin-bottom: -10px;
     box-shadow: 30px 30px 100px rgb(23, 83, 87), 0px 0px 100px rgb(48, 136, 142) inset;
 }
@@ -44,11 +83,10 @@ center {
 }
 
 .header, .footer {
-    height: 200px;
+    height: 180px;
     overflow: hidden;
     background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1));
 }
-
 
 .footer {
     height: 50px;
@@ -120,14 +158,19 @@ center {
     text-decoration: none;
 }
 
+a {
+    color:darkcyan;
+    text-decoration: none;
+}
+
 /*Override default margins/padding for headings.*/
 .title h1, h2, h3 {
     padding:0;
     margin: 0;
     font-family: Chewy, ui-serif !important;
-    font-weight: bolder;
+    font-weight: 400;
     color: #187b9b;
-    -webkit-text-stroke: 0.5px white;
+    text-shadow: 2px 2px 2px white;
 }
 
 /*These three classes are just for defining the boundaries and size of the main and sidebar columns. Most fancy styling goes in the 'box' class.*/
@@ -171,14 +214,36 @@ center {
     height: auto;
 }
 
-.inner {
+.footer p{
+    font-size: 13px;
+    margin-left: 1000px;
+    background: linear-gradient(
+            to bottom,
+            #b3f0ff 0%,   /* Bright highlight top */
+            #00bfff 40%,  /* Vibrant cyan */
+            #005fcc 50%,  /* Mid-way dark horizon split */
+            #00a3e0 55%,  /* Lower rebound gradient */
+            #00edff 100%  /* Bright aqua bottom */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 
+    filter: drop-shadow(0px 2px 0px rgba(255, 255, 255, 0.8)) drop-shadow(1px 3px 4px rgba(0, 40, 80, 0.65));
 }
 
 /* For narrow screens. Makes the sidebars narrower, and makes width of the
  * center/main div 50% of the viewport width.
  */
-@media(max-width:1180px) {
+@media(max-width:1150px) {
+    .fish {
+        width: 150px;
+        height: 150px;
+    }
+    .fish2 {
+        width: 150px;
+        height: 150px;
+    }
     .wrapper {
         width: calc(440px + 50vw);
     }
@@ -188,6 +253,14 @@ center {
 }
 
 @media(max-width:910px) {
+    .fish {
+        width: 0;
+        height: 0;
+    }
+    .fish2 {
+        width: 0;
+        height: 0;
+    }
     .wrapper {
         width: calc(360px + 52vw);
     }
@@ -202,6 +275,14 @@ center {
 
 /* Mobile compatibility. Puts everything into a standard vertical layout. */
 @media(orientation:portrait) {
+    .fish {
+        width: 0;
+        height: 0;
+    }
+    .fish2 {
+        width: 0;
+        height: 0;
+    }
     .wrapper {
         width: 96vw;
         margin: 0 auto;
