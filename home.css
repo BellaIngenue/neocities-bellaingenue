@@ -1,7 +1,9 @@
 /* COMMENTS LOOK LIKE ME :) */
 
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Coiny&family=Concert+One&family=DynaPuff:wght@400..700&family=Geo:ital@0;1&family=Offside&family=Unica+One&display=swap');/* FONT IMPORT */
+/* FONT IMPORT */
 
+/* MAIN CODE BODY */
 body {
     font-size: 20px;
     font-family: Unica One, monospace;
@@ -18,7 +20,7 @@ body {
     cursor: url('assets/cursor.png'), default;
 
 }
-
+/* FISHIES */
 .fish {
     position:absolute;
     display: flex;
@@ -63,7 +65,7 @@ img {
     overflow: clip;
 }
 
-/*Contains everything*/
+/* WRAPPERS */
 .wrapper {
     width: 1150px;
     background: rgb(255, 255, 255, .85);
@@ -77,7 +79,7 @@ img {
     box-shadow: 30px 30px 100px rgb(23, 83, 87), 0px 0px 100px rgb(48, 136, 142) inset;
 }
 
-/*Contains main and sidebar divs*/
+/* MAIN AND SIDEBARS */
 .wrapper-2 {
     position: relative;
 }
@@ -97,7 +99,7 @@ img {
 }
 
 
-/*Big title at the top of the page.*/
+/* TITLE IMG */
 .title {
     padding-left: 5px;
     padding-top: 10px;
@@ -105,13 +107,13 @@ img {
 
 
 
-/*Container for top row of links.*/
+/* LINKS TO OTHER PAGES */
 .links {
     padding-top: 5px;
     padding-bottom: 10px;
 }
 
-/*Div style for individual links.*/
+/* LINKS TO OTHER PAGES (TEXT FORM) */
 .link {
     text-align: center;
     display: inline-block;
@@ -158,12 +160,14 @@ img {
     text-decoration: none;
 }
 
+/* ALL LINKS */
+
 a {
     color:darkcyan;
     text-decoration: none;
 }
 
-/*Override default margins/padding for headings.*/
+/* OVERRIDE FOR TITLES AND HEADERS */
 .title h1, h2, h3 {
     padding:0;
     margin: 0;
@@ -173,7 +177,7 @@ a {
     text-shadow: 2px 2px 2px white;
 }
 
-/*These three classes are just for defining the boundaries and size of the main and sidebar columns. Most fancy styling goes in the 'box' class.*/
+/* MAIN SIDEBARS FOR ORGANIZATION */
 .main, .sidebar-right {
     display: inline-block;
 }
@@ -198,7 +202,7 @@ a {
     margin-left: 10px;
 }
 
-/*Box used for individual sections in the sidebar, center column, etc.*/
+/* USED FOR INDIVIDUAL BOXES */
 .box {
     padding: 5px 10px 5px 10px;
     background: rgb(53,188,222,.30);
@@ -208,12 +212,13 @@ a {
     border-radius: 0 0 10px 10px;
 }
 
-/*Prevent overflow of large images in main text areas.*/
+/* PREVENT OVERFLOW */
 .box img {
     max-width: 100%;
     height: auto;
 }
 
+/* FOOTER */
 .footer p{
     font-size: 13px;
     margin-left: 1000px;
