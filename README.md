@@ -4,11 +4,7 @@ Welcome to my silly Frutiger Aero-Inspired Website (hosted on NeoCities!!). I ho
 
 TO-DO LIST:
 - Add More Fish
-- Finish Each Page:
- - Intro to Frutiger
- - About Me
- - Music Room
- - Updates
+- Finish Each Page
 - Add an Interactive Music Area/Room
 - Fix the Cursor
 - Add Silly Gifs
