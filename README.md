@@ -8,3 +8,5 @@ TO-DO LIST:
 - Add an Interactive Music Area/Room
 - Fix the Cursor
 - Add Silly Gifs
+
+Feel free to Fork or Favorite if you're interested in getting the code for yourself and making it your own!!
