@@ -1,0 +1,225 @@
+/* COMMENTS LOOK LIKE ME :) */
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=DynaPuff:wght@400..700&family=Geo:ital@0;1&family=Offside&family=Unica+One&display=swap');
+/* FONT IMPORT */
+
+body {
+    font-size: 20px;
+    font-family: Unica One;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgb(53, 188, 222, .15), rgb(156, 239, 242, .15)), url("assets/frutiger.png"); /*This is the image in the background. Replace it with your own!*/
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    cursor: url('assets/cursor.png'), default;
+
+}
+
+center {
+    text-align: center;
+}
+
+/*Contains everything*/
+.wrapper {
+    width: 1150px;
+    background: rgb(255, 255, 255, .85);
+    margin: 0 auto;
+    top: 0;
+    margin-top: -10px;
+    border-left: 0px solid #12282f;
+    border-right: 0px solid #12282f;
+    border-radius: 50px;
+    margin-bottom: -10px;
+    box-shadow: 30px 30px 100px rgb(23, 83, 87), 0px 0px 100px rgb(48, 136, 142) inset;
+}
+
+/*Contains main and sidebar divs*/
+.wrapper-2 {
+    position: relative;
+}
+
+.header, .footer {
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1));
+}
+
+
+.footer {
+    height: 50px;
+}
+
+.header img {
+    border-top: 0;
+}
+
+
+/*Big title at the top of the page.*/
+.title {
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+
+
+/*Container for top row of links.*/
+.links {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+/*Div style for individual links.*/
+.link {
+    text-align: center;
+    display: inline-block;
+    list-style-type: none;
+    float: none;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Offside, monospace;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 0px solid darkcyan;
+    background: linear-gradient(
+            to bottom,
+            #b3f0ff 0%,   /* Bright highlight top */
+            #00bfff 40%,  /* Vibrant cyan */
+            #005fcc 50%,  /* Mid-way dark horizon split */
+            #00a3e0 55%,  /* Lower rebound gradient */
+            #00edff 100%  /* Bright aqua bottom */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    filter: drop-shadow(0px 2px 0px rgba(255, 255, 255, 0.8)) drop-shadow(1px 3px 4px rgba(0, 40, 80, 0.65));
+}
+
+.link:hover {
+    /* Crisp horizontal glossy reflection split */
+    background: linear-gradient(
+            to bottom,
+            #93cbda 0%,   /* Bright highlight top */
+            #0087b7 40%  /* Vibrant cyan */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0px 2px 0px rgba(255, 255, 255, 0.8)) drop-shadow(1px 3px 4px rgba(0, 40, 80, 0.65));
+
+    cursor: url('assets/click.png'), pointer;
+}
+
+.link a {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+/*Override default margins/padding for headings.*/
+.title h1, h2, h3 {
+    padding:0;
+    margin: 0;
+    font-family: Chewy, ui-serif !important;
+    font-weight: bolder;
+    color: #187b9b;
+    -webkit-text-stroke: 0.5px white;
+}
+
+/*These three classes are just for defining the boundaries and size of the main and sidebar columns. Most fancy styling goes in the 'box' class.*/
+.main, .sidebar-right {
+    display: inline-block;
+}
+
+.sidebar-left, .sidebar-right {
+    width: 200px;
+    position: absolute;
+    top: 0;
+}
+
+.sidebar-left {
+    margin-left: 10px;
+}
+
+.main {
+    margin-left: 220px;
+    width: 660px;
+}
+
+.sidebar-right {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/*Box used for individual sections in the sidebar, center column, etc.*/
+.box {
+    padding: 5px 10px 5px 10px;
+    background: rgb(53,188,222,.30);
+    color: #12282f;
+    border-top: 10px solid #187b9b;
+    margin: 10px 0px 15px 0px;
+    border-radius: 0 0 10px 10px;
+}
+
+/*Prevent overflow of large images in main text areas.*/
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.inner {
+
+}
+
+/* For narrow screens. Makes the sidebars narrower, and makes width of the
+ * center/main div 50% of the viewport width.
+ */
+@media(max-width:1180px) {
+    .wrapper {
+        width: calc(440px + 50vw);
+    }
+    .main {
+        width: 50vw;
+    }
+}
+
+@media(max-width:910px) {
+    .wrapper {
+        width: calc(360px + 52vw);
+    }
+    .sidebar-left, .sidebar-right {
+        width: 160px;
+    }
+    .main {
+        margin-left: 180px;
+        width: 52vw;
+    }
+}
+
+/* Mobile compatibility. Puts everything into a standard vertical layout. */
+@media(orientation:portrait) {
+    .wrapper {
+        width: 96vw;
+        margin: 0 auto;
+        padding:0;
+        position: relative;
+    }
+    .wrapper-2 {
+        width: 94vw;
+        margin: 0 auto;
+        padding:0;
+        position: relative;
+    }
+    .sidebar-left, .main, .sidebar-right {
+        position: relative;
+        width: 92vw;
+        margin: 0.25rem 1vw;
+    }
+    .sidebar-left, .sidebar-right {
+        font-size: 0.95em;
+    }
+}
