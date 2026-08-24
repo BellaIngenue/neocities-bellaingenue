@@ -63,7 +63,16 @@ center {
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
+
 }
+
+/* WEBDECK PLAYER */
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* WRAPPERS */
 .wrapper {
@@ -312,3 +321,4 @@ a {
         font-size: 0.95em;
     }
 }
+
